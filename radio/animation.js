@@ -14,3 +14,25 @@ setInterval(function() {
 
   currentIndex = (currentIndex + 1) % divs.length;
 }, 3000);
+
+window.onload = function() {
+    let currentIndex = 0;
+    let interval = 7000;  
+    var divs = document.querySelectorAll('#introduction-container > .rt-c2');
+    let container = document.getElementById("container");
+
+    if (divs.length > 0) {
+        divs[0].classList.add('active');
+    }
+
+    setInterval(function() {
+        divs[currentIndex].classList.remove('active');
+
+        let firstChild = container.children[0];
+        container.appendChild(firstChild);
+
+        currentIndex = (currentIndex + 1) % divs.length;
+        divs[currentIndex].classList.add('active');
+
+    }, interval);
+}
