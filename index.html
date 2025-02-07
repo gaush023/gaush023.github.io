@@ -1,187 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>Welcome to My Page!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4テスト用ニュースデモサイト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .big-article {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .big-article img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .big-article h2 {
+            margin: 0 0 10px;
+        }
+        .big-article p {
+            color: #666;
+        }
+        .article-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .article-card {
+            background-color: white;
+            width: 45%;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        .article-card h3 {
+            margin: 0;
+        }
+        .article-card p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .cta-button, .like-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: white;
+            text-decoration: none;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .cta-button:hover, .like-button:hover {
+            background-color: #005bb5;
+        }
+        .like-count {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .ad-section {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background-color: #e0e0e0;
+            margin: 20px 0;
+        }
+        .youtube-section {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .subscription-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+    </style>
+
+    <!-- Google Analyticsのトラッキングコード -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVX3D6FH5N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SVX3D6FH5N');
+    </script>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <header>
+        <h1>GA4テスト用ニュースデモサイト</h1>
+        <p>最新ニュースや記事を通じてGA4イベントのテストを行いましょう。</p>
+    </header>
 
-    <h1>TikTok Research API Services Terms of Service</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="#">特集記事</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
 
-        <p>
-          
+    <div class="main-content">
+        <div class="big-article">
+            <img src="https://via.placeholder.com/800x400" alt="Big Article Image">
+            <h2><a href="featured.html">特集記事: データ分析の未来</a></h2>
+            <p>データ駆動型の意思決定がビジネス成功のカギとなる時代、その未来とはどのようなものか。最新の分析トレンドをご紹介します。</p>
+        </div>
 
-    These terms apply with effect from: February 10, 2023
-    
-    
-    
-    These terms (the "TikTok Research API Services Terms of Service" or "Research API Terms"), when accepted, form a legal agreement between you and TikTok Inc. ("TikTok"), and govern your access to and use of TikTok Research API, our related websites (such as https://developers.tiktok.com("TikTok Research Site")), services, applications, and products which are stated to be offered subject to these Research API Terms (collectively, the "Services").
-    
-    By clicking the "Accept" button, or otherwise by using any of the Services, you agree (on your own behalf and on behalf of any Qualified Research Partner (as defined below) for whom you act) as follows:
-    
-    I. Definitions
-    1.Personal Data: means any information relating to an individual; and any information which falls within the scope of "personal data", "personal information" or "personally identifiable information" (or any materially similar or analogous concept or definition) under applicable privacy and data protection local laws.
-    
-    2.Qualified Research Partner(s): means and includes academic research institutions that meet all of the following:
-    
-      a. have demonstrable academic experience and expertise in their research area and in the processing and analysis of data;
-    
-      b. are free from any affiliation with TikTok and its affiliates (e.g., not working for TikTok or its affiliates as an intern, freelancer, vendor, or consultant); and
-    
-      c. do not have any conflicts of interest with respect to using the Services.
-    
-    3.Research: means any research, findings, studies, academic work products, and other materials that derive from utilizing TikTok Research API (as defined below) or in connection with the use of TikTok Research API.
+        <div class="article-grid">
+            <div class="article-card">
+                <h3><a href="article1.html">PythonでGA4のイベントを自動化する方法</a></h3>
+                <p>GA4とPythonを使った自動レポート作成の具体例を紹介します。</p>
+                <button class="like-button" onclick="likeArticle(this)">いいね</button>
+                <span class="like-count">0 いいね</span>
+            </div>
 
-    4.TikTok Research API: means TikTok's application programming interfaces, software development kits, specifications, sample code, data, metadata, technology, software, and other associated information and materials as well as any updates thereto that TikTok provides to you to facilitate your Research.
-    
-    5.TikTok Research API Data: means any publicly available data (including any content created, uploaded, posted, sent, received, stored, or otherwise provided by TikTok users or by other third party licensors and any other data and information related to that content) provided by TikTok to you and made available through the TikTok Research API or by any other means authorized by TikTok, and any copies and derivative works thereof.
-    
-    
-    
-    II. Description of the Services and License
-    1.TikTok Research API Data is provided through the TikTok Research API as a tool to faciliate Research. Eligibility to access the Services is based on various criteria as determined by TikTok in its sole discretion. These criteria include compliance with applicable laws, regulations, and the scope and nature of your proposed Research. To qualify to access the Services, you must either be a Qualified Research Partner or be properly authorized to act on behalf of a Qualified Research Partner, and meet all of the requirements specified in these Research API Terms and any eligibility criteria specified in the TikTok Research Site.
-    
-    2.TikTok will require you to submit an application for review and approval by TikTok prior to giving you access to the Services. More information on the application process is available on the TikTok Research Site. You are responsible for ensuring that the information you provided is and remains accurate and up-to-date. If you make any changes to the information you supplied in your original application after approval by TikTok, you must resubmit the application to TikTok. You agree to cooperate with TikTok in the submission process, provide all required information, and answer all questions reasonably required by TikTok regarding your application. Any changes to the information you supplied in your original application without providing reasonably prompt notice to TikTok, will be deemed a breach of these Research API Terms and may result in termination of access.
-    
-    3.You are responsible for ensuring the confidentiality of your login credentials and responsible for all acts or omissions that occur under your account.
-    
-    4.Subject to these Research API Terms, TikTok hereby grants you a personal, non-exclusive, non-transferable, non-sublicensable, limited, revocable license during the approved Research solely to access and use the Services for the sole purpose of undertaking the Research.
-    
-    5.TikTok or its licensors own and shall maintain ownership of all right, title and interest in and to the Services. TikTok expressly reserves all rights to the foregoing. These Research API Terms grant you no right, title, or interest in any intellectual property owned or licensed by TikTok. TikTok shall have an unlimited, irrevocable and worldwide right to use for any purpose any feedback, whether provided verbally or in written form, by you to TikTok regarding your use of and/or access to Services, without monetary or other compensation to you.
+            <div class="article-card">
+                <h3><a href="article2.html">データ分析のための週次レポート設定</a></h3>
+                <p>週次レポートを効率的に生成し、マーケティング効果を最大化します。</p>
+                <button class="like-button" onclick="likeArticle(this)">いいね</button>
+                <span class="like-count">0 いいね</span>
+            </div>
 
-    6.If applicable, any content created, uploaded, posted, sent, received, stored, or otherwise provided by TikTok users or by other third party licensors (“TikTok User Content”), may be subject to copyright or other intellectual property and proprietary rights. You may not distribute TikTok User Content unless you obtain all necessary rights, consents, and licenses by the owner of such content or as required by law.
-    
-    7.Your use of the Services and interaction with TikTok Services is subject to and governed by the policies, guidelines and other terms and conditions (as updated from time to time) applicable to such use or access by you (the “Incorporated Terms”), including without limitation the following:
-    
-    a. the TikTok Terms of Service located at https://www.tiktok.com/legal/terms-of-use?lang=en;
-    
-    b. the TikTok Privacy Policy located at https://www.tiktok.com/legal/privacy-policy?lang=en.
-    
-    c. the TikTok Community Guidelines located at https://www.tiktok.com/community-guidelines?lang=en.
-    
-    d. [Not applicable if you are using the Services in the European Economic Area, United Kingdom, or Switzerland] the TikTok Developer Terms of Service located athttps://www.tiktok.com/legal/tik-tok-developer-terms-of-service?lang=en
-    
-     You will not encourage or create facility for third parties as that violates these Research API Terms or the above Incorporated Terms. In the event of a conflict between these Research API Terms and any of the above Incorporated Terms, these Research API Terms shall prevail.
-    
-    
-    
-    III. Rules and Restrictions
-    There are various obligations relating to your use of the Service as follows:
+            <div class="article-card">
+                <h3><a href="article3.html">異常検知アラートの実装方法</a></h3>
+                <p>閾値を超えたデータを即座に通知し、素早い対応を可能にします。</p>
+                <button class="like-button" onclick="likeArticle(this)">いいね</button>
+                <span class="like-count">0 いいね</span>
+            </div>
 
-    1.Reasonable use restrictions. You must:
-    
-     a.abide by all laws, rules and regulations applicable to your Research and the Services;
-    
-     b.comply at all times with these Research API Terms and with TikTok’s requirements, requests, policies and applicable Incorporated Terms (or those of any network connected to the Services or TikTok services);
-    
-     c.not access any data or TikTok content other than through the TikTok Research API (including without limitation, no use of scraping or other technical or manual techniques for extraction of content);
-    
-     d.implement and maintain technical, physical, and administrative safeguards in accordance with these Research API Terms and the highest industry standards; and
-    
-     e.immediately disconnect with the Services in the event of your becoming aware of any compromise or deficiency in relation to your computer systems, networks, web-browsers or routers and report any such compromise or deficiency to TikTok immediately upon becoming aware of it.
-    
-    2.General Restrictions: When accessing Services, you will not (or allow others to):
-    
-    a. distribute, license, transfer, directly or indirectly sell, rent, syndicate, lend, copy, modify, reverse engineer, decompile, or otherwise alter, in whole or in part, the Services;
-    
-    b. sublicense to any third party or permit any third party, without TikTok’s express written authorization, to browse, access or use the Services, or any derivatives thereof;
-    
-     c. use the Services, for any commercial or unauthorized purpose including beyond the scope of the approved Research;
-    
-    d. use the Services in connection with or for any illegal, unauthorized or otherwise improper purposes, or in any manner which would violate any right of any person, including intellectual property rights, or breach any laws or regulations, or in any manner that is misleading, defamatory, infringing, libelous, disparaging, obscene or otherwise objectionable;
-    
-    e. use or combine the Services with software offered under an open source license in such a way that would cause the Services to be subject to any obligations under any such open source license;
-    
-    f. use the Services in a manner that violates any mobile developer or app store terms, conditions, guidelines, or policies;
-    
-    g. use the Services in a matter that (as determined by TikTok), exceeds reasonable request volume, constitutes excessive or abusive usage, or otherwise fails to comply with or is contradictory with any documentation, policies, these Research API Terms, or any Incorporated Terms;
-    
-    h. use the Services for fraudulent or otherwise unlawful or unauthorized purposes, including but not limited to the development or promotion of spyware, adware or other malicious codes or programs or to defame or harass any person;
+            <div class="article-card">
+                <h3><a href="article4.html">GA4のトラッキング戦略のベストプラクティス</a></h3>
+                <p>GA4を効果的に活用するための戦略と設定方法を解説します。</p>
+                <button class="like-button" onclick="likeArticle(this)">いいね</button>
+                <span class="like-count">0 いいね</span>
+            </div>
+        </div>
+    </div>
 
-    i. introduce viruses, malware, malicious code or other content of a harmful or destructive nature through your access or use of the Services, including, but not limited to, failure to ensure adequate protection is installed on your devices and servers in accordance with industry practices;
-    
-    j. use any robot, spider, site search or retrieval application, or other device to collect information about users of the Services for any unauthorized purposes;
-    
-    k. act in any way which could reasonably be expected to adversely impact the stability of TikTok’s servers or the behavior of other applications using the Services;
-    
-     l. interfere with or attempt to interfere with the proper working of the Services, disrupt our website or any networks connected to the Services, or bypass, circumvent or attempt to bypass or circumvent any measures we may use to prevent or restrict access to the Services;
-    
-    m. remove, obscure, or alter any legal, copyright, trademark or other proprietary notices in relation to the TikTok services, Services, and abide by TikTok’s requirements in relation to the use of any proprietary materials, or falsify or delete any author attributions, legal notices, or other labels of origins or source of material;
-    
-    n. create a false identity on the TikTok Research Site; or
-    
-    o. use Services or TikTok Services in any manner that is not expressly authorized under these Research API Terms.
-    
-    3.Research API specific obligations:
-    
-     a. Quotas. As part of your Research, you will receive a certain API quota (also known as API rate limits) assigned by TikTok for accessing TikTok Research API Data during your Research. The API quota is determined by TikTok in its sole discretion. TikTok may adjust your quota or revoke your access to the Services at any time, including following the completion of your Research.
-    
-     b. Use of TikTok Research API Data. You may only use TikTok Research API Data for Research on the topics approved by TikTok as part of your application.
-    
-     c. Principles of Research Ethics. You agree not to use the Services and/or perform your Research in a manner that is deceptive, unethical, false, or misleading, that compromises academic integrity, or that violates principles of research ethics. You will notify us without undue delay upon becoming aware of any content that is, or you believe to be, illegal, fraudulent, or violates TikTok Community Guidelines, such notification to include all known details relating to the alleged illegal content.
-    
-     d. Data Refresh and Deletion. You agree to regularly refresh TikTok Research API Data at least every fifteen (15) days, and delete data that is not available from the TikTok Research API at the time of each refresh. TikTok Research API Data shall not be kept for longer than is necessary for Research approved as part of your application. You agree to provide TikTok with written certification of data deletion upon TikTok's request.
-    
-      e. Research Outputs and Publication. You may create derivative Research outputs that are not specifically and directly made available through the Services. You may not publish your Research outputs if your outputs violate these Research API Terms. You and your partners must provide attribution to TikTok in your Research outputs and publications that use data derived from your use of the Services. You agree to provide TikTok with a copy of any publications pertaining to or containing the results and findings of the Research outputs, and any supporting information that you propose to make available to any third party, sufficiently ahead of the planned publication or disclosure date (in any event at least seven days ahead of such date) solely to identify any confidential information or any private personal data that may be included or revealed in those materials and which need to be removed prior to publication or disclosure.
-    
-      f. No Endorsement. You agree that TikTok's provision to you of the Services does not imply any endorsement by TikTok of either you, your Research, or any opinion, conclusion, or publication in relation to your Research. You may only reference TikTok as the source of your Research and shall not make any representations contrary to the no endorsement requirement. You may not use the TikTok name, logo, trademarks, service marks, domain names, or other distinctive brand features of TikTok without TikTok's prior written approval. Nothing in these Research API Terms shall be construed as constituting a partnership, joint venture or relationship of employer and employee between the parties.
+    <div class="youtube-section">
+        <h2>参考動画</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/u1F7_eDVmGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-    g. License to TikTok. You agree TikTok and its affiliates will have a worldwide, free, non-exclusive, perpetual or for the maximum term allowed by local law, license to use, reproduce, distribute, transmit, and display, your Research in whole or in part for any internal business purpose. Upon publication, the license will additionally allow reasonable excerpts to be used externally. TikTok shall not monetize access to such external uses.
-    
-    
-    
-    4.Privacy Obligations:
-    
-    a. Data Protection Addendum. To the extent that you receive TikTok Research API Data that is also Personal Data, then you agree that the Global Data Sharing Research Appendix shall apply to such data sharing.
-    
-     b. In addition to complying with the terms set out in the Global Data Sharing Research Appendix, you must:    i. only process any Personal Data as part of your Research strictly where required for such Research, and apply data minimization, anonymization and pseudonymization techniques wherever possible;     ii. not use the TikTok Research API Data to build profiles of individual users or individual devices nor will you combine the TikTok Research API Data with any other information or data about individual users that you obtain from any other source nor associate the behaviour of any individual or device with any profile, database or similar record;    iii. not circumvent any privacy features contained in the Services;    iv. not make any direct contact with TikTok users other than strictly in accordance with any processes agreed with you as part of the Research application;    v. not undertake any processing activities in respect of the TikTok Research API Data which involve the processing of any data which would be considered to be sensitive or special category data (or any materially similar or analogous concept or definition) under Applicable Data Protection Law (as defined in the Global Data Sharing Research Appendix) or to infer the same. If you believe that any TikTok Research API Data provided to you does contain any such data, then you must promptly inform us and delete it;    vi. not publish your Research outputs if your outputs can be linked back to a specific TikTok user or other individual;    vii. strictly adhere to any time limits, rate limits and other restrictions in relation to your access and use of the TikTok Research API Data and the scope of the Research confirmed to you on approval of your application;    viii. provide information and documentation on request to TikTok regarding compliance with these Research API Terms including in relation to these privacy restrictions and obligations and your compliance with Applicable Data Protection Laws (including without limitation in respect of your compliance with transparency, data subject/individual rights, privacy assessments and any reliance by you on exemptions in respect of research activities or otherwise under Applicable Data Protection Laws);    ix. delete any inadvertently generated Personal Data promptly and in any event within 30 days; and    x. comply if TikTok informs you of a TikTok user having required rectification, erasure or restriction of processing of Personal Data to you, you must comply with such requests.
-    
-    5.Compliance and Monitoring. TikTok may monitor your use of the Services and the Research at any time and without notice or otherwise conduct an audit of your activities in order to ensure compliance with these Research API Terms. You agree not to block or interfere with such efforts and to provide us with reasonable access to information related to your compliance with these Research API Terms. You agree you will provide your full cooperation and assistance with such monitoring and audit and provide reasonable documentary evidence that you and your Research comply with your obligations under these Research API Terms.
-    
-    IV. Confidentiality
-    You acknowledge that the ability to access and aggregate analysis of TikTok Research API Data might not generally be available in the public domain at the time that data is made available or disclosed to you. All of the data to which you gain access or which is provided to you in connection with your use of the Services, including aggregated, de-identified, or anonymized data, may be considered as "Confidential Information" of TikTok and proprietary to TikTok, and you agree not to disclose, copy, reproduce, share, sell, or otherwise transfer to any third party any TikTok Research API Data-or any data derived or aggregated from TikTok Research API Data, unless you can demonstrate that such information: (a) was already known to you, other than under an obligation of confidentiality, at the time of disclosure; (b) was generally available in the public domain at the time of disclosure to you; (c) became generally available in the public domain after disclosure other than through your act or omission; (d) was subsequently lawfully disclosed to you by a third party without any obligation of confidentiality; or (e) was independently developed by you without use of or reference to any information or materials disclosed by TikTok. You may use this Confidential Information only as expressly permitted hereunder and you may not share the Confidential Information with any third party other than as required by a court, a regulator or otherwise under applicable laws. You acknowledge and agree that nothing in these Research API Terms will be construed as restricting or preventing TikTok from creating and fully exploiting its own applications, products, or services with any obligation to you.
-    
-    
-    
-    V. Disclaimer
-    TO THE EXTENT PERMISSIBLE UNDER APPLICABLE LAW: (I) TikTok PROVIDES THE SERVICES INCLUDING THE TikTok Research API ON AN ‘AS IS’ AND ‘AS AVAILABLE’ BASIS AND MAKES NO COMMITMENT THAT IT WILL BE AVAILABLE; (II) DISCLAIMS ALL GUARANTEES, CONDITIONS, WARRANTIES AND REPRESENTATIONS, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE CONCERNING THE Services SUPPLIED BY TikTok HEREUNDER, INCLUDING BUT NOT LIMITED TO, THOSE IMPLIED WARRANTIES OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT; (III) TikTok DOES NOT REPRESENT THAT THE Services WILL BE UNINTERRUPTED OR ERROR FREE UNINTERRUPTED, VIRUS-FREE OR SECURE OR MEET YOUR REQUIREMENTS; (IV) YOUR USE OF THE Services IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE THAT RESULTS FROM THE USE OF THE Services INCLUDING, BUT NOT LIMITED TO, ANY DAMAGE TO YOUR COMPUTER SYSTEM, LOSS OF DATA OR ANY OTHER DAMAGE OR INJURY TO YOU OR ANY THIRD PARTY. THE LAWS OF CERTAIN JURISDICTIONS DO NOT ALLOW THE DISCLAIMER OF IMPLIED WARRANTIES, SO THE ABOVE DISCLAIMER MAY NOT APPLY TO YOU. With respect to TikTok User Content, TikTok is not responsible for the accuracy, completeness, usefulness, availability, safety, or legality of such data, including content that may be offensive, indecent, defamatory, objectionable, or that may violate third party rights or applicable laws or regulations.
-    
-    
-    
-    VI. Indemnity
-    To the maximum extent permitted by applicable law, you agree to hold harmless and indemnify TikTok, its subsidiaries, affiliates, licensors, licensees, assigns and successors, and each of their officers, directors, employees, agents, advisors and shareholders from and against any third-party claim, suit or action including any liability, losses, damages (actual and/or consequential), expenses, litigation costs and reasonable attorney fees, of every kind and nature arising from or in any way related to your (a) actual or alleged breach of your obligations under these Research API Terms; (b) your use of Services or data derived therefrom; or (c) the Research. TikTok shall use reasonable endeavors to provide you with written notice of any such claim, suit or action.
-    
-    
-    
-    VII. Limitation of Liability
-    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL TikTok, ITS AFFILIATES, ASSIGNS, SUCCESSORS, LICENSORS OR LICENSEES, OR EACH OF THEIR OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, ADVISORS, OR SHAREHOLDERS, BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO ANY LOSS OF DATA, SERVICE INTERRUPTION, COMPUTER FAILURE, OR PECUNIARY LOSS) ARISING OUT OF OR IN CONNECTION WITH THESE Research API Terms OR THE USE OF, OR INABILITY TO USE, THE TikTok SERVICES, OR THE Services, INCLUDING ANY DAMAGES RESULTING THEREFROM, REGARDLESS OF THE FORM OF THE ACTION OR THE BASIS OF THE CLAIM, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE, PRODUCT LIABILITY OR OTHERWISE), REGARDLESS OF WHETHER TikTok HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. YOUR ONLY RIGHT WITH RESPECT TO ANY PROBLEMS OR DISSATISFACTION WITH TikTok SERVICES OR THE Services IS TO STOP USING THE TikTok SERVICES OR THE Services.
+    <div class="ad-section">
+        <h2>スポンサー広告</h2>
+        <p>ここに広告が表示されます。</p>
+    </div>
 
+    <div class="subscription-section">
+        <h2>購読を登録しよう！</h2>
+        <p>最新の記事や更新情報を受け取るために、メールアドレスを登録してください。</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="メールアドレスを入力" required style="padding: 10px; width: 70%;">
+            <button type="submit" style="padding: 10px 20px; background-color: #0073e6; color: white; border: none; cursor: pointer;">登録</button>
+        </form>
+    </div>
 
+    <footer>
+        <p>&copy; 2025 GA4テスト用ブログデモサイト | <a href="#">プライバシーポリシー</a> | <a href="#">利用規約</a></p>
+    </footer>
 
-    VIII. Anti-Corruption; Export Rules
-    You agree to comply with all applicable laws and regulations in relation to export control, including those administered or enforced by the Bureau of Industry and Security of the U.S. Department of Commerce. You agree that you will not transfer any information or software it receives from TikTok that constitutes an export or transfer of controlled items, data or services, to include transfer to non-US persons employed by or associated with, or under contract to that party, without the authority of an export license, agreement or applicable exemption or exception.
-    
-    
-    
-    IX. Jurisdiction Specific Terms
-    You acknowledge and agree that additional Jurisdiction Specific Terms may apply to the provision and use of the Services. Where applicable, such Jurisdiction Specific Terms are incorporated into these Research API Terms by reference.
-    
-    
-    
-    X. Miscellaneous
-    1.Modification. We may modify these Research API Terms at any time. Other than changes required by law, we will provide you with thirty (30) days' notice of any material changes to these Research API Terms (for example by email or to your TikTok developer account). However, it remains your sole responsibility to review these Research API Terms from time to time to view any such changes. The updated Research API Terms will be effective as of the time of posting, or such later date as may be specified in the updated terms. Your continued access or use of the Services after the modifications have become effective will be deemed your acceptance of the modified terms. You may discontinue your use of the Services at any time.
-    
-    2.Termination. We may modify, suspend or terminate your access to, or discontinue the availability of, any parts of the Services at any time, including, without limitation, where we determine that you have breached these Research API Terms. Upon termination of these Research API Terms, you must immediately cease use of any and all the Services and permanently delete all TikTok Research API Data.
-    
-    3.Conflicts. These Research API Terms apply in addition to the Incorporated Terms (as defined above) and theGlobal Data Sharing Research Appendix. In the event of any conflict between these Research API Terms and those other terms, these Research API Terms shall take precedence solely with respect to your use of the Services, and solely to the extent of the conflict. In the event of any conflict between these Research API Terms and the Jurisdiction Specific Terms, the Jurisdiction Specific Terms shall take precedence, and solely to the extent of the conflict.
-    
-    4.Governing Law. These Research API Terms, its subject matter and formation, are governed by the laws of the State of California. Any disputes or proceedings (including tort claims) arising out of or relating to these Research API Terms will be litigated exclusively in the United States District Court for the Central District of California. If, however, that court would lack original jurisdiction over the litigation, then the dispute will be litigated exclusively in the Superior Court of California, County of Los Angeles. The parties consent to personal jurisdiction in both courts. EACH PARTY EXPRESSLY WAIVES ANY RIGHT TO A TRIAL BY JURY IN AN ACTION OR PROCEEDING BROUGHT BY OR AGAINST EITHER PARTY.
-    
-    5.Notice. TikTok may give notices to you by email. All notices to TikTok will be sent to TikTok Inc., 10100 Venice Blvd., Culver City, CA 90232, Attn: Legal; with a copy to legal@tiktok.com.
-     </p>
+    <script>
+        function likeArticle(button) {
+            const likeCountSpan = button.nextElementSibling;
+            let currentLikes = parseInt(likeCountSpan.textContent);
+            currentLikes += 1;
+            likeCountSpan.textContent = `${currentLikes} いいね`;
 
-    <a href = "https://www.tiktok.com/legal/page/global/terms-of-service-research-api/en">https://www.tiktok.com/legal/page/global/terms-of-service-research-api/en</a>
-    
+            // Google Analyticsにカスタムイベントを送信
+            gtag('event', 'like_button_click', {
+                'event_category': 'User Interaction',
+                'event_label': button.previousElementSibling.textContent,
+                'value': 1
+            });
+        }
+    </script>
 </body>
 </html>
-
