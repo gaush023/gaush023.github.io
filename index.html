@@ -69,12 +69,6 @@
             border-radius: 5px;
             margin-bottom: 15px;
         }
-        .big-article h2 {
-            margin: 0 0 10px;
-        }
-        .big-article p {
-            color: #666;
-        }
         .article-grid {
             display: flex;
             flex-wrap: wrap;
@@ -90,48 +84,12 @@
         .article-card h3 {
             margin: 0;
         }
-        .article-card p {
-            font-size: 0.9em;
-            color: #666;
-        }
-        .cta-button, .like-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0073e6;
-            color: white;
-            text-decoration: none;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-        .cta-button:hover, .like-button:hover {
-            background-color: #005bb5;
-        }
-        .like-count {
-            display: inline-block;
-            margin-left: 10px;
-            font-weight: bold;
-        }
         .ad-section {
             width: 100%;
             padding: 20px;
             text-align: center;
             background-color: #e0e0e0;
             margin: 20px 0;
-        }
-        .youtube-section {
-            width: 100%;
-            text-align: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .subscription-section {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
             background-color: #333;
@@ -146,6 +104,7 @@
         }
     </style>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVX3D6FH5N"></script>
 <script>
@@ -155,7 +114,14 @@
 
   gtag('config', 'G-SVX3D6FH5N');
 </script>
+
 <body>
+
+    <!-- ヘッダー上の広告 -->
+    <div class="ad-section">
+        <p>ヘッダー上の広告エリア（ここに広告バナーを配置できます）</p>
+    </div>
+
     <header>
         <h1>GA4テスト用ニュースデモサイト</h1>
         <p>最新ニュースや記事を通じてGA4イベントのテストを行いましょう。</p>
@@ -169,7 +135,6 @@
         </ul>
     </nav>
 
-    <!-- サイト内検索バー -->
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="記事を検索...">
         <button onclick="searchArticles()">検索</button>
@@ -182,6 +147,7 @@
             <p>データ駆動型の意思決定がビジネス成功のカギとなる時代、その未来とはどのようなものか。最新の分析トレンドをご紹介します。</p>
         </div>
 
+        <!-- 記事カード -->
         <div class="article-grid">
             <div class="article-card" data-title="PythonでGA4のイベントを自動化する方法">
                 <h3><a href="article1.html">PythonでGA4のイベントを自動化する方法</a></h3>
@@ -210,29 +176,35 @@
                 <button class="like-button" onclick="likeArticle(this)">いいね</button>
                 <span class="like-count">0 いいね</span>
             </div>
+
+            <div class="article-card" data-title="データビジュアライゼーションの重要性">
+                <h3><a href="article5.html">データビジュアライゼーションの重要性</a></h3>
+                <p>データの可視化による意思決定の加速について解説します。</p>
+                <button class="like-button" onclick="likeArticle(this)">いいね</button>
+                <span class="like-count">0 いいね</span>
+            </div>
+
+            <div class="article-card" data-title="AIを使った次世代マーケティング">
+                <h3><a href="article6.html">AIを使った次世代マーケティング</a></h3>
+                <p>AI技術を活用した最先端のマーケティング戦略をご紹介します。</p>
+                <button class="like-button" onclick="likeArticle(this)">いいね</button>
+                <span class="like-count">0 いいね</span>
+            </div>
         </div>
-    </div>
 
-    <div class="youtube-section">
-        <h2>参考動画</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/u1F7_eDVmGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+        <!-- 真ん中の広告 -->
+        <div class="ad-section">
+            <p>真ん中の広告エリア（ここに広告バナーを配置できます）</p>
+        </div>
 
-    <div class="ad-section">
-        <h2>スポンサー広告</h2>
-        <p>ここに広告が表示されます。</p>
-    </div>
-
-    <div class="subscription-section">
-        <h2>購読を登録しよう！</h2>
-        <p>最新の記事や更新情報を受け取るために、メールアドレスを登録してください。</p>
-        <form action="#" method="post">
-            <input type="email" name="email" placeholder="メールアドレスを入力" required style="padding: 10px; width: 70%;">
-            <button type="submit" style="padding: 10px 20px; background-color: #0073e6; color: white; border: none; cursor: pointer;">登録</button>
-        </form>
     </div>
 
     <footer>
+        <!-- フッター上の広告 -->
+        <div class="ad-section">
+            <p>フッター上の広告エリア（ここに広告バナーを配置できます）</p>
+        </div>
+        
         <p>&copy; 2025 GA4テスト用ブログデモサイト | <a href="#">プライバシーポリシー</a> | <a href="#">利用規約</a></p>
     </footer>
 
@@ -269,8 +241,16 @@
             if (!matchFound) {
                 alert('該当する記事が見つかりませんでした。');
             }
+
+            // Google Analyticsに検索クエリを送信
+            if (query !== '') {
+                gtag('event', 'search_query', {
+                    'search_term': query,
+                    'event_category': 'Site Search',
+                    'event_label': 'User Search Input'
+                });
+            }
         }
     </script>
 </body>
 </html>
-
