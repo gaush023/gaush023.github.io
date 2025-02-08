@@ -57,29 +57,6 @@
     .main-content {
       padding: 20px;
     }
-    .big-article {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .big-article img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 15px;
-    }
-    .big-article h2 {
-      margin: 0 0 10px;
-    }
-    .big-article p {
-      color: #666;
-    }
-    .article-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
     .article-card {
       background-color: white;
       width: 45%;
@@ -88,7 +65,7 @@
       padding: 15px;
     }
     .article-card h3 {
-      margin: 0;
+      margin: 0 0 10px;
     }
     .article-card p {
       font-size: 0.9em;
@@ -102,6 +79,7 @@
       text-decoration: none;
       margin-top: 10px;
       border-radius: 5px;
+      cursor: pointer;
     }
     .cta-button:hover, .like-button:hover {
       background-color: #005bb5;
@@ -154,173 +132,34 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-SVX3D6FH5N');
-  
-    // 各種カスタムイベント送信用の関数
+
+    // 記事閲覧イベント：送信パラメーターは "article_title"
     function trackArticleView(articleTitle) {
       gtag('event', 'article_view', {
         'article_title': articleTitle
       });
     }
-  
-    function trackAdImpression(adLocation) {
-      gtag('event', 'ad_impression', {
-        'ad_location': adLocation
-      });
-    }
-  
-    function trackVideoPlay(videoId) {
-      gtag('event', 'video_play', {
-        'video_id': videoId
-      });
-    }
-  
-    function trackFormSubmit(formId) {
-      gtag('event', 'form_submit', {
-        'form_id': formId
-      });
-    }
-  
-    // ページ読み込み時に各広告のインプレッションを送信（例）
-    window.addEventListener('load', function() {
-      trackAdImpression('header');   // ヘッダー上の広告
-      trackAdImpression('middle');   // コンテンツ中の広告
-      trackAdImpression('footer');   // フッター上の広告
-    });
-  </script>
-</head>
-<body>
-  <header>
-    <h1>GA4テスト用ニュースデモサイト</h1>
-    <p>最新ニュースや記事を通じてGA4イベントのテストを行いましょう。</p>
-  </header>
-  
-  <nav>
-    <ul>
-      <li><a href="index.html">ホーム</a></li>
-      <li><a href="#">特集記事</a></li>
-      <li><a href="#">お問い合わせ</a></li>
-    </ul>
-  </nav>
-  
-  <!-- サイト内検索バー -->
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="記事を検索...">
-    <button onclick="searchArticles()">検索</button>
-  </div>
-  
-  <div class="main-content">
-    <div class="big-article">
-      <img src="https://via.placeholder.com/800x400" alt="Big Article Image">
-      <!-- 記事リンクにクリック時のトラッキングを追加 -->
-      <h2><a href="featured.html" onclick="trackArticleView('データ分析の未来')">特集記事: データ分析の未来</a></h2>
-      <p>データ駆動型の意思決定がビジネス成功のカギとなる時代、その未来とはどのようなものか。最新の分析トレンドをご紹介します。</p>
-    </div>
-  
-    <!-- 広告エリア（スポンサー広告） -->
-    <div class="ad-section">
-      <a href="#" class="cta-button" onclick="gtag('event', 'ad_click', {'ad_location': 'header'});">
-        <h2>スポンサー広告</h2>
-        <p>ここに広告が表示されます。</p>
-      </a>
-    </div>
-  
-    <!-- 複数の記事カード -->
-    <div class="article-grid">
-      <div class="article-card" data-title="PythonでGA4のイベントを自動化する方法">
-        <!-- リンククリックで記事閲覧イベントを送信 -->
-        <h3><a href="article1.html" onclick="trackArticleView('PythonでGA4のイベントを自動化する方法');">PythonでGA4のイベントを自動化する方法</a></h3>
-        <p>GA4とPythonを使った自動レポート作成の具体例を紹介します。</p>
-        <button class="like-button" onclick="likeArticle(this)">いいね</button>
-        <span class="like-count">0 いいね</span>
-      </div>
-  
-      <div class="article-card" data-title="データ分析のための週次レポート設定">
-        <h3><a href="article2.html" onclick="trackArticleView('データ分析のための週次レポート設定');">データ分析のための週次レポート設定</a></h3>
-        <p>週次レポートを効率的に生成し、マーケティング効果を最大化します。</p>
-        <button class="like-button" onclick="likeArticle(this)">いいね</button>
-        <span class="like-count">0 いいね</span>
-      </div>
-  
-      <div class="article-card" data-title="異常検知アラートの実装方法">
-        <h3><a href="article3.html" onclick="trackArticleView('異常検知アラートの実装方法');">異常検知アラートの実装方法</a></h3>
-        <p>閾値を超えたデータを即座に通知し、素早い対応を可能にします。</p>
-        <button class="like-button" onclick="likeArticle(this)">いいね</button>
-        <span class="like-count">0 いいね</span>
-      </div>
-  
-      <div class="article-card" data-title="GA4のトラッキング戦略のベストプラクティス">
-        <h3><a href="article4.html" onclick="trackArticleView('GA4のトラッキング戦略のベストプラクティス');">GA4のトラッキング戦略のベストプラクティス</a></h3>
-        <p>GA4を効果的に活用するための戦略と設定方法を解説します。</p>
-        <button class="like-button" onclick="likeArticle(this)">いいね</button>
-        <span class="like-count">0 いいね</span>
-      </div>
-    </div>
-  </div>
-  
-  <!-- ２つ目のメインコンテンツエリア -->
-  <div class="main-content">
-    <div class="big-article">
-      <img src="https://via.placeholder.com/800x400" alt="Big Article Image">
-      <h2><a href="featured2.html" onclick="trackArticleView('Test');">特集記事: Test</a></h2>
-      <p>example</p>
-    </div>
-  
-    <!-- YouTubeセクション：クリックで動画再生イベントを送信 -->
-    <div class="youtube-section" onclick="trackVideoPlay('u1F7_eDVmGw');">
-      <h2>参考動画</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/u1F7_eDVmGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  
-    <!-- 中央広告エリア -->
-    <div class="ad-section">
-      <a href="#" class="cta-button" onclick="gtag('event', 'ad_click', {'ad_location': 'middle'});">
-        <h2>スポンサー広告</h2>
-        <p>ここに広告が表示されます。</p>
-      </a>
-    </div>
-  
-    <!-- 購読登録セクション：フォーム送信イベントを送信 -->
-    <div class="subscription-section">
-      <h2>購読を登録しよう！</h2>
-      <p>最新の記事や更新情報を受け取るために、メールアドレスを登録してください。</p>
-      <form id="subscriptionForm" action="#" method="post" onsubmit="trackFormSubmit('subscriptionForm');">
-        <input type="email" name="email" placeholder="メールアドレスを入力" required style="padding: 10px; width: 70%;">
-        <button type="submit" style="padding: 10px 20px; background-color: #0073e6; color: white; border: none; cursor: pointer;">登録</button>
-      </form>
-    </div>
-  </div>
-  
-  <footer>
-    <!-- フッター広告エリア -->
-    <div class="ad-section">
-      <a href="#" class="cta-button" onclick="gtag('event', 'ad_click', {'ad_location': 'footer'});">
-        <h2>スポンサー広告</h2>
-        <p>ここに広告が表示されます。</p>
-      </a>
-    </div>
-    <p>&copy; 2025 GA4テスト用ブログデモサイト | <a href="#">プライバシーポリシー</a> | <a href="#">利用規約</a></p>
-  </footer>
-  
-  <script>
+
+    // いいねイベント：記事タイトルは、記事カードの data-title 属性から取得
     function likeArticle(button) {
+      const articleTitle = button.closest('.article-card').getAttribute('data-title');
       const likeCountSpan = button.nextElementSibling;
-      let currentLikes = parseInt(likeCountSpan.textContent);
+      let currentLikes = parseInt(likeCountSpan.textContent) || 0;
       currentLikes += 1;
       likeCountSpan.textContent = `${currentLikes} いいね`;
-  
-      // いいねボタンのクリックイベントを送信
+
       gtag('event', 'like_button_click', {
         'event_category': 'User Interaction',
-        'event_label': button.previousElementSibling.textContent,
+        'event_label': articleTitle,
         'value': 1
       });
     }
-  
+
     function searchArticles() {
       const query = document.getElementById('searchInput').value.toLowerCase();
       const articles = document.querySelectorAll('.article-card');
       let matchFound = false;
-  
+
       articles.forEach(article => {
         const title = article.getAttribute('data-title').toLowerCase();
         if (title.includes(query)) {
@@ -330,12 +169,11 @@
           article.style.display = 'none';
         }
       });
-  
+
       if (!matchFound) {
         alert('該当する記事が見つかりませんでした。');
       }
-  
-      // 検索クエリのイベントを送信
+
       if (query !== '') {
         gtag('event', 'search_query', {
           'search_term': query,
@@ -345,5 +183,116 @@
       }
     }
   </script>
+</head>
+<body>
+  <header>
+    <h1>GA4テスト用ニュースデモサイト</h1>
+    <p>最新ニュースや記事を通じてGA4イベントのテストを行いましょう。</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="#">特集記事</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <!-- サイト内検索バー -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="記事を検索...">
+    <button onclick="searchArticles()">検索</button>
+  </div>
+
+  <div class="main-content">
+    <!-- 特集記事 -->
+    <div class="big-article">
+      <img src="https://via.placeholder.com/800x400" alt="Big Article Image">
+      <h2><a href="featured.html" onclick="trackArticleView('データ分析の未来');">特集記事: データ分析の未来</a></h2>
+      <p>データ駆動型の意思決定がビジネス成功のカギとなる時代、その未来とはどのようなものか。最新の分析トレンドをご紹介します。</p>
+    </div>
+
+    <!-- 広告 -->
+    <div class="ad-section">
+      <a href="#" class="cta-button" onclick="gtag('event', 'ad_click', {'ad_location': 'header'});">
+        <h2>スポンサー広告</h2>
+        <p>ここに広告が表示されます。</p>
+      </a>
+    </div>
+
+    <!-- 記事カード -->
+    <div class="article-grid">
+      <div class="article-card" data-title="PythonでGA4のイベントを自動化する方法">
+        <h3><a href="article1.html" onclick="trackArticleView('PythonでGA4のイベントを自動化する方法');">PythonでGA4のイベントを自動化する方法</a></h3>
+        <p>GA4とPythonを使った自動レポート作成の具体例を紹介します。</p>
+        <button class="like-button" onclick="likeArticle(this)">いいね</button>
+        <span class="like-count">0 いいね</span>
+      </div>
+
+      <div class="article-card" data-title="データ分析のための週次レポート設定">
+        <h3><a href="article2.html" onclick="trackArticleView('データ分析のための週次レポート設定');">データ分析のための週次レポート設定</a></h3>
+        <p>週次レポートを効率的に生成し、マーケティング効果を最大化します。</p>
+        <button class="like-button" onclick="likeArticle(this)">いいね</button>
+        <span class="like-count">0 いいね</span>
+      </div>
+
+      <div class="article-card" data-title="異常検知アラートの実装方法">
+        <h3><a href="article3.html" onclick="trackArticleView('異常検知アラートの実装方法');">異常検知アラートの実装方法</a></h3>
+        <p>閾値を超えたデータを即座に通知し、素早い対応を可能にします。</p>
+        <button class="like-button" onclick="likeArticle(this)">いいね</button>
+        <span class="like-count">0 いいね</span>
+      </div>
+
+      <div class="article-card" data-title="GA4のトラッキング戦略のベストプラクティス">
+        <h3><a href="article4.html" onclick="trackArticleView('GA4のトラッキング戦略のベストプラクティス');">GA4のトラッキング戦略のベストプラクティス</a></h3>
+        <p>GA4を効果的に活用するための戦略と設定方法を解説します。</p>
+        <button class="like-button" onclick="likeArticle(this)">いいね</button>
+        <span class="like-count">0 いいね</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <!-- サブ記事 -->
+    <div class="big-article">
+      <img src="https://via.placeholder.com/800x400" alt="Big Article Image">
+      <h2><a href="featured2.html" onclick="trackArticleView('Test');">特集記事: Test</a></h2>
+      <p>example</p>
+    </div>
+
+    <!-- YouTube セクション -->
+    <div class="youtube-section" onclick="gtag('event', 'video_play', {'video_id': 'u1F7_eDVmGw'});">
+      <h2>参考動画</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/u1F7_eDVmGw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- 中央広告 -->
+    <div class="ad-section">
+      <a href="#" class="cta-button" onclick="gtag('event', 'ad_click', {'ad_location': 'middle'});">
+        <h2>スポンサー広告</h2>
+        <p>ここに広告が表示されます。</p>
+      </a>
+    </div>
+
+    <!-- 購読登録 -->
+    <div class="subscription-section">
+      <h2>購読を登録しよう！</h2>
+      <p>最新の記事や更新情報を受け取るために、メールアドレスを登録してください。</p>
+      <form id="subscriptionForm" action="#" method="post" onsubmit="gtag('event', 'form_submit', {'form_id': 'subscriptionForm'});">
+        <input type="email" name="email" placeholder="メールアドレスを入力" required style="padding: 10px; width: 70%;">
+        <button type="submit" style="padding: 10px 20px; background-color: #0073e6; color: white; border: none; cursor: pointer;">登録</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="ad-section">
+      <a href="#" class="cta-button" onclick="gtag('event', 'ad_click', {'ad_location': 'footer'});">
+        <h2>スポンサー広告</h2>
+        <p>ここに広告が表示されます。</p>
+      </a>
+    </div>
+    <p>&copy; 2025 GA4テスト用ブログデモサイト | <a href="#">プライバシーポリシー</a> | <a href="#">利用規約</a></p>
+  </footer>
 </body>
 </html>
